@@ -50,6 +50,14 @@ namespace MobiFonShopApi
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MobiFonShopApi v1"));
             }
 
+            app.UseCors(
+              options => options
+              .SetIsOriginAllowed(x => _ = true)
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials()
+          );
+
             app.UseHttpsRedirection();
 
             app.UseRouting();

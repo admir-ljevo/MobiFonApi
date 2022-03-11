@@ -81,10 +81,10 @@ namespace MobiFonShopApi.Controllers
         {
             return _dbContext.Telefon.Include(x => x.Proizvodjac).ToList();
 
+        }
             
 
           
-        }
 
 
     }
