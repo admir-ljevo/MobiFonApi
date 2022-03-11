@@ -1,1 +1,38 @@
-<p>telefoni works!</p>
+<table class="table table-info">
+  <tr>
+    <th>ID</th>
+    <th>Proizvođač</th>
+    <th>Model</th>
+    <th>Kamera</th>
+    <th>Procesor</th>
+    <th>RAM</th>
+    <th>Memorija</th>
+    <th>Ekran</th>
+    <th>Garancija</th>
+    <th>Trajanje garancije</th>
+    <th>Stanje</th>
+    <th>Slika</th>
+  </tr>
+  <tbody>
+  <tr *ngFor="let s of telefonPodaci">
+    <td>{{s.id}}</td>
+    <td>{{s.proizvodjac.opis}}</td>
+    <td>{{s.model}}</td>
+    <td>{{s.kamera}}</td>
+    <td>{{s.procesor}}</td>
+    <td>{{s.ram}}</td>
+    <td>{{s.memorija}}</td>
+    <td>{{s.ekran}}</td>
+    <td>{{s.garancija}}</td>
+    <td>{{s.mjeseciGarancije}}</td>
+    <td>{{s.novo}}</td>
+    <td><img class="profilna-slika" src="{{s.slika_telefona}}"></td>
+    <td>
+      <button (click)="obrisi(s)">Obrisi</button>
+      <button (click)="detalji(s)">Uredi</button>
+      <!--    <button [routerLink]="['/student-maticnaknjiga', s.id]">Maticna knjiga</button>-->
+      <button (click)="maticnaknjiga(s)">Maticna knjiga</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
