@@ -7,5 +7,15 @@ namespace MobiFonShopApi.ViewModels
 {
     public class TelefonUpdateVM
     {
+        public int ProizvodjacId { get; set; }
+        public string Model { get; set; }
+        public string Kamera { get; set; }
+        public string Procesor { get; set; }
+        public string Ram  { get; set; }
+        public string Memorija { get; set; }
+        public string Ekran { get; set; }
+        public bool Garancija { get; set; }
+        public int MjeseciGarancije { get; set; }
+        public bool Novo { get; set; }
     }
 }

@@ -24,7 +24,7 @@ namespace MobiFonShopApi.Models
         public string Memorija { get; set; }
         public string Ekran { get; set; }
         public bool Garancija { get; set; }
-
+        public string Slika_telefona { get; set; }
         public int MjeseciGarancije { get; set; }
         public bool Novo { get; set; }
     }
