@@ -1,0 +1,65 @@
+<p>edit-student works!</p>
+
+<div *ngIf="editTelefon!=null && editTelefon.prikazi" class="modal fade show" id="exampleModalLive" tabindex="-1" aria-labelledby="exampleModalLiveLabel" aria-modal="true" role="dialog" style="display: block;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLiveLabel">Dodaj/Uredi telefon</h5>
+        <button type="button" class="btn-close" (click)="editTelefon.prikazi = false" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <div class="mb-3">
+            <label class="form-label">Proizvođač</label>
+            <select class="form-control" [(ngModel)]="editTelefon.proizvodjacId" >
+              <option *ngFor="let x of proizvodjaci" value="{{x.id}}">{{x.opis}}</option>
+            </select>
+          </div>
+
+
+          <label class="form-label">Model</label>
+          <input class="form-control" [(ngModel)]="editTelefon.model"  placeholder="Model">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Kamera</label>
+          <input class="form-control" [(ngModel)]="editTelefon.kamera"  placeholder="Kamera">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Procesor</label>
+          <input class="form-control" [(ngModel)]="editTelefon.procesor"  placeholder="Procesor">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">RAM</label>
+          <input class="form-control" [(ngModel)]="editTelefon.ram"  placeholder="GB">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Memorija</label>
+          <input class="form-control" [(ngModel)]="editTelefon.memorija"  placeholder="GB">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Ekran</label>
+          <input class="form-control" [(ngModel)]="editTelefon.ekran"  placeholder="inch">
+        </div>
+        <div class="mb-3 form-check">
+          <input   type="checkbox" class="form-check-input" [(ngModel)]="editTelefon.garancija"  placeholder="obnovaGodine" />
+          <label class="form-check-label">Garancija</label>
+        </div>
+        <div class="mb-3" *ngIf="editTelefon.garancija">
+          <label class="form-label">Mjeseci garancije</label>
+          <input class="form-control" [(ngModel)]="editTelefon.mjeseciGarancije"  placeholder="Broj mjeseci">
+        </div>
+
+        <div class="mb-3 form-check">
+          <input   type="checkbox" class="form-check-input" [(ngModel)]="editTelefon.novo"  placeholder="Novo" />
+          <label class="form-check-label">Novo</label>
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="editTelefon.prikazi = false" >Close</button>
+        <button type="button" class="btn btn-primary" (click)="snimi()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

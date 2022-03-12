@@ -62,7 +62,7 @@ namespace MobiFonShopApi.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost("{id}")]
         public ActionResult Delete(int id)
         {
             Telefon telefon = _dbContext.Telefon.Find(id);

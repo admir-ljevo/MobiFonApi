@@ -31,8 +31,10 @@
       <button (click)="obrisi(s)">Obrisi</button>
       <button (click)="detalji(s)">Uredi</button>
       <!--    <button [routerLink]="['/student-maticnaknjiga', s.id]">Maticna knjiga</button>-->
-      <button (click)="maticnaknjiga(s)">Maticna knjiga</button>
     </td>
   </tr>
   </tbody>
 </table>
+<button class="btn btn-info" (click)="btnNovi()">Dodaj telefon</button>
+<app-edit-telefon *ngIf="urediTelefon!=null" [editTelefon] = "urediTelefon"></app-edit-telefon>
+

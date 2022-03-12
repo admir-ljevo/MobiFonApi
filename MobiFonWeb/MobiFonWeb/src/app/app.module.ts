@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TelefoniComponent } from './Components/telefoni/telefoni.component';
 import {HttpClientModule} from "@angular/common/http";
+import { EditTelefonComponent } from './Components/edit-telefon/edit-telefon.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
-    TelefoniComponent
+    TelefoniComponent,
+    EditTelefonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [],
