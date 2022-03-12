@@ -23,7 +23,7 @@
     <td>{{s.ram}}</td>
     <td>{{s.memorija}}</td>
     <td>{{s.ekran}}</td>
-    <td>{{s.garancija}}</td>
+    <td *ngIf="s.garancija">Ima</td>
     <td>{{s.mjeseciGarancije}}</td>
     <td>{{s.novo}}</td>
     <td><img class="profilna-slika" src="{{s.slika_telefona}}"></td>

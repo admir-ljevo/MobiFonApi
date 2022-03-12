@@ -58,6 +58,10 @@ namespace MobiFonShopApi
               .AllowCredentials()
           );
 
+
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();

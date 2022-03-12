@@ -7,6 +7,7 @@ using MobiFonShopApi.Models;
 using MobiFonShopApi.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -31,7 +32,7 @@ namespace MobiFonShopApi.Controllers
             {
                 telefon = new Telefon
                 {
-                    Slika_telefona = Config.SlikeFolder + "mobitel.jpg"
+                    Slika_telefona = Config.SlikeURL + "mobitel.jpg"
                 };
                 _dbContext.Add(telefon);
             }
@@ -83,6 +84,32 @@ namespace MobiFonShopApi.Controllers
 
         }
             
+
+        [HttpPost("{id}")]
+        public ActionResult AddImage (int id, [FromForm] TelefonAddImageVM vM)
+        {
+            try
+            {
+                Telefon telefon = _dbContext.Telefon.Include(x => x.Proizvodjac).SingleOrDefault(x => x.Id == id);
+                if (telefon != null && vM.slika_telefona!=null)
+                {
+                    string ekstenzija = Path.GetExtension(vM.slika_telefona.FileName);
+                    var filename = $"{Guid.NewGuid()}{ekstenzija}";
+                    vM.slika_telefona.CopyTo(new FileStream(Config.SlikeFolder + filename, FileMode.Create));
+                    telefon.Slika_telefona = Config.SlikeURL + filename;
+                    _dbContext.SaveChanges();
+
+                }
+
+                return Ok(telefon);
+
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(ex.Message + "   " + ex.InnerException);
+            }
+        }
 
           
 

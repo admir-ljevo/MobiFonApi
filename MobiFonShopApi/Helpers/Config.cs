@@ -9,7 +9,7 @@ namespace MobiFonShopApi.Helpers
     {
         public static string AplikacijURL = "https://localhost:44356/";
 
-        public static string Slike => "Slike/";
+        public static string Slike => "images/";
         public static string SlikeURL => AplikacijURL + Slike;
         public static string SlikeFolder => "wwwroot/" + Slike;
     }
