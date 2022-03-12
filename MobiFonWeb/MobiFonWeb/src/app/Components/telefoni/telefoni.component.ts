@@ -54,7 +54,7 @@ export class TelefoniComponent implements OnInit {
       ram: "",
       memorija: "",
       ekran: "",
-      garancija:"false",
+      garancija: false,
       mjeseciGarancije: 0,
       novo: false,
       prikazi: true

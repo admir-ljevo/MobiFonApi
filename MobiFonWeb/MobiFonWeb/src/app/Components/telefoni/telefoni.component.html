@@ -23,9 +23,11 @@
     <td>{{s.ram}}</td>
     <td>{{s.memorija}}</td>
     <td>{{s.ekran}}</td>
-    <td *ngIf="s.garancija">Ima</td>
-    <td>{{s.mjeseciGarancije}}</td>
-    <td>{{s.novo}}</td>
+    <td *ngIf="s.garancija" >Posjeduje</td>
+    <td *ngIf="s.garancija==false" >Ne posjeduje</td>
+    <td>{{s.mjeseciGarancije}} mjeseci</td>
+    <td *ngIf="s.novo">Novo</td>
+    <td *ngIf="s.novo==false">Polovno</td>
     <td><img class="profilna-slika" src="{{s.slika_telefona}}"></td>
     <td>
       <button (click)="obrisi(s)">Obrisi</button>

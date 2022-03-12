@@ -7,12 +7,14 @@ import { TelefoniComponent } from './Components/telefoni/telefoni.component';
 import {HttpClientModule} from "@angular/common/http";
 import { EditTelefonComponent } from './Components/edit-telefon/edit-telefon.component';
 import {FormsModule} from "@angular/forms";
+import { LoginComponent } from './Components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TelefoniComponent,
-    EditTelefonComponent
+    EditTelefonComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

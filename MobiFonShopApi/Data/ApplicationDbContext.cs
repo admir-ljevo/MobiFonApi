@@ -13,6 +13,7 @@ namespace MobiFonShopApi.Data
 
         public DbSet<Proizvodjac> Proizvodjac { get; set; }
         public DbSet<Telefon> Telefon { get; set; }
+        public DbSet<KorisnickiNalog> KorisnickiNalog { get; set; }
 
         public ApplicationDbContext(
             DbContextOptions options) : base(options)

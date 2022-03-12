@@ -34,7 +34,7 @@ export class EditTelefonComponent implements OnInit {
     this.httpKlijent.post(MojConfig.adresa_servera+"/Telefon/Update/" + this.editTelefon.id, this.editTelefon).subscribe(
       (x: any)=>{
         alert("Uspješno ste evidentirali telefon: "  + this.editTelefon.model)
-        
+
       }
     )
   }

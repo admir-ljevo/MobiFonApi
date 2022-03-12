@@ -6281,6 +6281,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.AspNetCore.ApiAuthorization.IdentityServer >= 5.0.12",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.12",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.12",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.12",
       "Microsoft.AspNetCore.Identity.UI >= 5.0.12",
@@ -6330,6 +6331,10 @@
         "targetAlias": "net5.0",
         "dependencies": {
           "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": {
+            "target": "Package",
+            "version": "[5.0.12, )"
+          },
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[5.0.12, )"
           },

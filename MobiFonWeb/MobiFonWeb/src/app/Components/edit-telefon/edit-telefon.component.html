@@ -39,12 +39,12 @@
         <div class="mb-3">
           <label class="form-label">Ekran</label>
           <input class="form-control" [(ngModel)]="editTelefon.ekran"  placeholder="inch">
-        </div>
-        <div class="mb-3 form-check">
-          <input   type="checkbox" class="form-check-input" [(ngModel)]="editTelefon.garancija"  placeholder="obnovaGodine" />
-          <label class="form-check-label">Garancija</label>
-        </div>
-        <div class="mb-3" *ngIf="editTelefon.garancija">
+        </div> <div class="mb-3 form-check">
+        <input   type="checkbox" class="form-check-input" [(ngModel)]="editTelefon.garancija"  placeholder="Garancija" />
+        <label class="form-check-label">Garancija</label>
+      </div>
+
+        <div class="mb-3" *ngIf="editTelefon.garancija" >
           <label class="form-label">Mjeseci garancije</label>
           <input class="form-control" [(ngModel)]="editTelefon.mjeseciGarancije"  placeholder="Broj mjeseci">
         </div>
