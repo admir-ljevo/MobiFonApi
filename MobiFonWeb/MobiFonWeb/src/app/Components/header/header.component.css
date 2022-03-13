@@ -44,7 +44,7 @@ li{
   border-radius: 10%;
   border-bottom: 1px dotted gainsboro;
 }
-li:hover{
+.meni-stavke:hover{
   background-color: #0047ab;
   font-size: 1.03em;
   cursor: pointer;

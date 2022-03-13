@@ -1,4 +1,9 @@
 <app-header></app-header>
 <div class="lijevi-meni">
-
+  <div class="brendovi-container">
+   <p>Pretraga po brendovima</p>
+    <ul *ngFor="let x of brendovi" >
+      <li class="brend" value="{{x.id}}" >{{x.opis}}</li>
+    </ul>
+  </div>
 </div>

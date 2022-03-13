@@ -4,5 +4,41 @@
   bottom: 0;
   top: 90px;
   position: fixed;
+  background-color: #003399;
+}
+.brendovi-container{
+  height: 95%;
+  margin-top: 5%;
+  width: 86%;
+  margin-left: 7%;
+
+
+}
+p{
+  color: white;
+  text-align: center;
+
+}
+ul{
+padding: 0;
+}
+li {
+
+}
+.brend{
+  list-style-type: none;
+  color: white;
+  border-bottom: 1px dotted gray;
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+  width: 60%;
+  margin-left: 20%;
+}
+li:hover{
   background-color: #0047ab;
+  cursor: pointer;
+  border-radius: 10%;
+
 }
