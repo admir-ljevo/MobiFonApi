@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {MojConfig} from "../../moj-config";
 import {tsCastToAny} from "@angular/compiler-cli/src/ngtsc/typecheck/src/ts_util";
+import {JwtHelperService} from "@auth0/angular-jwt";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-telefoni',
@@ -13,7 +15,7 @@ export class TelefoniComponent implements OnInit {
   telefonPodaci: any;
   urediTelefon: any;
 
-  constructor(private httpKlijent: HttpClient) { }
+  constructor(private httpKlijent: HttpClient, private jwtHelper: JwtHelperService, private router: Router) { }
 
   ngOnInit(): void {
     this.preuzmiPodatke();
@@ -40,9 +42,13 @@ export class TelefoniComponent implements OnInit {
     this.urediTelefon.prikazi=true;
   }
 
-  maticnaknjiga(s: any) {
-
-  }
+   isUserAuthenticated(){
+      const token: string | null=localStorage.getItem("jwt");
+      if(token && !this.jwtHelper.isTokenExpired(token)){
+        return true;
+      }
+      return false;
+   }
 
   btnNovi(){
     this.urediTelefon={
@@ -59,6 +65,11 @@ export class TelefoniComponent implements OnInit {
       novo: false,
       prikazi: true
     }
+  }
+
+  logOut(){
+    localStorage.removeItem("jwt");
+    this.router.navigate(["/login"]);
   }
 
 }
