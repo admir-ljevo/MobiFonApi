@@ -25,7 +25,6 @@ export class TelefoniComponent implements OnInit {
     this.httpKlijent.get(MojConfig.adresa_servera+"/Telefon/GetAll", this.telefonPodaci).subscribe(
       (x: any)=>{
         this.telefonPodaci=x;
-        alert("Podaci preuzeti");
       }
     )
   }
@@ -63,7 +62,8 @@ export class TelefoniComponent implements OnInit {
       garancija: false,
       mjeseciGarancije: 0,
       novo: false,
-      prikazi: true
+      prikazi: true,
+      cijena : 0
     }
   }
 

@@ -4,6 +4,7 @@ import {TelefoniComponent} from "./Components/telefoni/telefoni.component";
 import {LoginComponent} from "./Components/login/login.component";
 import {JwtModule} from "@auth0/angular-jwt";
 import {AuthGuard} from "./guards/auth-guard.service";
+import {HomeComponent} from "./Components/home/home.component";
 
 export function tokenGetter(){
   return localStorage.getItem("jwt");
@@ -11,7 +12,8 @@ export function tokenGetter(){
 
 const routes: Routes = [
   {path: 'telefoni', component: TelefoniComponent, canActivate: [AuthGuard]},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: '', component: HomeComponent}
 ];
 
 @NgModule({

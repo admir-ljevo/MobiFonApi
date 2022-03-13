@@ -1,0 +1,51 @@
+.header{
+  position: fixed;
+  width: 100%;
+  height: 90px;
+  background-color: #191970;
+  display: flex;
+  flex-direction: row;
+}
+.header-lijevo{
+  width: 15%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.logo{
+  height: 90%;
+  width: 110px;
+  margin-top: 3%;
+}
+.header-desno{
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#search{
+  width: 200px;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li{
+  color: white;
+  font-family: 'Roboto';
+  padding: 7px;
+  border-radius: 10%;
+  border-bottom: 1px dotted gainsboro;
+}
+li:hover{
+  background-color: #0047ab;
+  font-size: 1.03em;
+  cursor: pointer;
+}

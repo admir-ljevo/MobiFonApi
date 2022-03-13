@@ -8,13 +8,17 @@ import {HttpClientModule} from "@angular/common/http";
 import { EditTelefonComponent } from './Components/edit-telefon/edit-telefon.component';
 import {FormsModule} from "@angular/forms";
 import { LoginComponent } from './Components/login/login.component';
+import { HomeComponent } from './Components/home/home.component';
+import { HeaderComponent } from './Components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TelefoniComponent,
     EditTelefonComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

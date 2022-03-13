@@ -11,6 +11,7 @@
     <th>Garancija</th>
     <th>Trajanje garancije</th>
     <th>Stanje</th>
+    <th>Cijena</th>
     <th>Slika</th>
   </tr>
   <tbody>
@@ -28,6 +29,7 @@
     <td>{{s.mjeseciGarancije}} mjeseci</td>
     <td *ngIf="s.novo">Novo</td>
     <td *ngIf="s.novo==false">Polovno</td>
+    <td>{{s.cijena}} KM</td>
     <td><img class="profilna-slika" src="{{s.slika_telefona}}"></td>
     <td>
       <button (click)="obrisi(s)">Obrisi</button>
