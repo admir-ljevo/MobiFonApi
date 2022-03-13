@@ -72,7 +72,7 @@ namespace MobiFonShopApi.Controllers
             var tokenString = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
             return Ok(new { Token = tokenString });
 
-            return BadRequest("Usro si nešto");
+           
 
         }
 

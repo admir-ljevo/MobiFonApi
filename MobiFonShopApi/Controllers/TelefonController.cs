@@ -112,7 +112,13 @@ namespace MobiFonShopApi.Controllers
             }
         }
 
-          
+        [HttpGet]
+        public List<Telefon> GetByProizvodjac(int id)
+        {
+            return _dbContext.Telefon.Include(x => x.Proizvodjac).Where(x => x.ProizvodjacId == id).ToList();
+        }
+
+
 
 
     }
