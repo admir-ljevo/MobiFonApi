@@ -29,7 +29,7 @@
         <h6 class="garancija" *ngIf="x.garancija==false">/</h6>
       </div>
       <h6 class="cijena">{{x.cijena}} KM</h6>
-      <button class="btn btn-primary">Detalji</button>
+      <button class="btn btn-primary" (click)="Detalji(x)">Detalji</button>
     </div>
   </div>
 

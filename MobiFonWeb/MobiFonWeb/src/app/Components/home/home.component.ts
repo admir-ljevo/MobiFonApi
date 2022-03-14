@@ -42,4 +42,7 @@ export class HomeComponent implements OnInit {
   }
 
 
+  Detalji(x: any) {
+    this.router.navigate(['telefon-detalji', x.id]);
+  }
 }
