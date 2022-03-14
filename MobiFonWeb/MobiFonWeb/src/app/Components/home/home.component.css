@@ -11,8 +11,6 @@
   margin-top: 5%;
   width: 86%;
   margin-left: 7%;
-
-
 }
 p{
   color: white;
@@ -43,14 +41,6 @@ li:hover{
 
 }
 
-
-table{
-  margin-left: 15%;
-  margin-top: 90px;
-}
-
-
-
 img{
   width: 100px;
   height: 100px;
@@ -59,6 +49,19 @@ img{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+}
+.btnSvi{
+  color: white;
+  margin-left: 5%;
+  padding: 5px 15px;
+  width: fit-content;
+  border-bottom: 1px dotted gray;
+  border-radius: 10px;
+}
+.btnSvi:hover{
+  background-color: #0047ab;
+  cursor: pointer;
 }
 option{
   color: white;
@@ -74,4 +77,77 @@ option:hover{
   cursor: pointer;
   background-color: #0047ab;
 }
+
+
+.mobiteli-container{
+
+  position: relative;
+  margin-top: 100px;
+  margin-left: 22.5%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  gap: 30px;
+  width: 70%;
+}
+.telefon-container{
+  background-color: #003399;
+  flex: 1 1 300px;
+  text-align: center;
+  max-width: 300px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+img{
+  height: 250px;
+  width: 200px;
+  border-radius: 10px;
+  padding-bottom: 30px;
+}
+
+h3{
+  color: white;
+  text-align: center;
+  background-color: black;
+  border-bottom: 1px solid white;
+}
+
+.stanje-container h6{
+  color: white;
+}
+.stanje-container{
+  width: 200px;
+  margin-left: 50px;
+  margin-right: 12px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted black;
+
+
+
+}
+
+.garancija-container h6{
+  color: white;
+  display: inline;
+}
+.garancija-container{
+  width: 200px;
+  margin-left: 50px;
+  margin-right: 12px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted black;
+
+}
+
+.cijena{
+  color: white;
+  border-bottom: 1px dotted black;
+}
+button{
+
+}
+
 

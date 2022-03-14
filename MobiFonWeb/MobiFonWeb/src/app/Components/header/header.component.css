@@ -5,6 +5,7 @@
   background-color: #191970;
   display: flex;
   flex-direction: row;
+  z-index: 9999;
 }
 .header-lijevo{
   width: 15%;

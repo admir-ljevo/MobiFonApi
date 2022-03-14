@@ -1,54 +1,36 @@
-<app-header></app-header>
+<app-header
+  [pretragaTelefoni]="filtriraniTelefoni"
+
+></app-header>
 <div class="container">
 <div class="lijevi-meni">
   <div class="brendovi-container">
    <p>Pretraga po brendovima</p>
-    <h6>Svi</h6>
+    <h6 class = "btnSvi" (click)="preuzmiTelefone()">Svi</h6>
     <div class="brendovi" *ngFor="let x of brendovi">
       <option (click)="filtriraj(x)" class="brend-stavka" value="{{x.id}}" >{{x.opis}}</option>
 
     </div>
   </div>
 </div>
-<table class="table table-info">
-  <tr>
-    <th>ID</th>
-    <th>Proizvođač</th>
-    <th>Model</th>
-    <th>Kamera</th>
-    <th>Procesor</th>
-    <th>RAM</th>
-    <th>Memorija</th>
-    <th>Ekran</th>
-    <th>Garancija</th>
-    <th>Trajanje garancije</th>
-    <th>Stanje</th>
-    <th>Cijena</th>
-    <th>Slika</th>
-  </tr>
-  <tbody>
-  <tr *ngFor="let s of filtriraniTelefoni" >
-    <td>{{s.id}}</td>
-    <td>{{s.proizvodjac.opis}}</td>
-    <td>{{s.model}}</td>
-    <td>{{s.kamera}}</td>
-    <td>{{s.procesor}}</td>
-    <td>{{s.ram}}</td>
-    <td>{{s.memorija}}</td>
-    <td>{{s.ekran}}</td>
-    <td *ngIf="s.garancija" >Posjeduje</td>
-    <td *ngIf="s.garancija==false" >Ne posjeduje</td>
-    <td>{{s.mjeseciGarancije}} mjeseci</td>
-    <td *ngIf="s.novo">Novo</td>
-    <td *ngIf="s.novo==false">Polovno</td>
-    <td>{{s.cijena}} KM</td>
-    <td><img class="profilna-slika" src="{{s.slika_telefona}}"></td>
-    <td>
-
-      <!--    <button [routerLink]="['/student-maticnaknjiga', s.id]">Maticna knjiga</button>-->
-    </td>
-  </tr>
-  </tbody>
-</table>
 </div>
+  <div class="mobiteli-container">
+    <div class="telefon-container"  *ngFor="let x of filtriraniTelefoni" >
+      <h3 class="telefon-naslov">{{x.proizvodjac.opis}} {{x.model}}</h3>
+        <img src="{{x.slika_telefona}}" alt="">
+      <div class="stanje-container">
+        <h6>Stanje: </h6>
+        <h6 class="stanje" *ngIf="x.novo">Novo</h6>
+        <h6 class="stanje" *ngIf="x.novo==false">Polovno</h6>
+      </div>
+      <div class="garancija-container">
+        <h6 class="garancija">Garancija: </h6>
+        <h6 class="garancija" *ngIf="x.garancija"> {{x.mjeseciGarancije}} mjeseci </h6>
+        <h6 class="garancija" *ngIf="x.garancija==false">/</h6>
+      </div>
+      <h6 class="cijena">{{x.cijena}} KM</h6>
+      <button class="btn btn-primary">Detalji</button>
+    </div>
+  </div>
+
 
