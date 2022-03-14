@@ -11,17 +11,35 @@ import {MojConfig} from "../../moj-config";
 export class HomeComponent implements OnInit {
 
   constructor(private httpKlijent: HttpClient, private router: Router) { }
-
+  telefoni: any;
   brendovi: any;
-
+  brendId: number = 0;
+  filtriraniTelefoni: any;
   preuzmiBrendove(){
     this.httpKlijent.get(MojConfig.adresa_servera+"/Proizvodjac/GetAll", this.brendovi).subscribe(x=>{
       this.brendovi=x;
     })
   }
 
+  preuzmiTelefone(){
+    this.httpKlijent.get(MojConfig.adresa_servera+"/Telefon/GetAll", this.telefoni).subscribe(x=>{
+      this.filtriraniTelefoni=x;
+      this.telefoni=x;
+      }
+    )
+  }
+
+  filtriraj(s : any){
+    this.brendId=s.id;
+    console.log(s.id)
+    this.filtriraniTelefoni = this.telefoni.filter((x: any)=> x.proizvodjacId==this.brendId);
+
+  }
+
   ngOnInit(): void {
     this.preuzmiBrendove();
+    this.preuzmiTelefone();
   }
+
 
 }
