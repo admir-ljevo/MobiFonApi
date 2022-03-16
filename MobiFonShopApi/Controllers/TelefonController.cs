@@ -53,7 +53,7 @@ namespace MobiFonShopApi.Controllers
             telefon.Garancija = vm.Garancija;
             telefon.MjeseciGarancije = vm.MjeseciGarancije;
             telefon.FiksnaCijena = vm.FiksnaCijena;
-            telefon.Detaljno = telefon.Detaljno;
+            telefon.Detaljno = vm.Detaljno;
             telefon.Novo = vm.Novo;
             telefon.Cijena = vm.Cijena;
 

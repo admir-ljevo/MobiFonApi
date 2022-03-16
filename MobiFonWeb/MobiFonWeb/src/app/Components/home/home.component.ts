@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   telefoni: any;
   brendovi: any;
   brendId: number = 0;
-  filtriraniTelefoni: any;
+  filtriraniTelefoni: any = null;
   preuzmiBrendove(){
     this.httpKlijent.get(MojConfig.adresa_servera+"/Proizvodjac/GetAll", this.brendovi).subscribe(x=>{
       this.brendovi=x;

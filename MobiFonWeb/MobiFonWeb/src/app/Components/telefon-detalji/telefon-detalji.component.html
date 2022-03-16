@@ -17,7 +17,6 @@
   <th>Garancija</th>
   <th>Trajanje garancije</th>
   <th>Stanje</th>
-    <th>Detaljan opis</th>
     <th>Fiksna cijena</th>
   <th>Cijena</th>
 </tr>
@@ -35,10 +34,13 @@
   <td>{{telefonPodaci.mjeseciGarancije}} mjeseci</td>
   <td *ngIf="telefonPodaci.novo">Novo</td>
   <td *ngIf="telefonPodaci.novo==false">Polovno</td>
-  <td>{{telefonPodaci.detaljno}}</td>
   <td *ngIf="telefonPodaci.fiksnaCijena">Da</td>
   <td *ngIf="telefonPodaci.fiksnaCijena==false">Ne</td>
   <td>{{telefonPodaci.cijena}} KM</td>
 </tr>
 </tbody>
 </table>
+<div *ngIf="telefonPodaci.detaljno!=null" class="detaljan-opis-container">
+  <h5>Detaljno</h5>
+  <p>{{telefonPodaci.detaljno}}</p>
+</div>
