@@ -1,0 +1,25 @@
+img{
+  height: 100%;
+  width: 100%;
+
+
+}
+table{
+  position: absolute;
+  top: 500px;
+}
+.slika-container{
+  position: absolute;
+  top: 100px;
+  width: 18%;
+  height: 400px;
+
+
+  left: 2.25%;
+}
+table, th, td{
+  border-collapse: collapse;
+}
+thead, tbody{
+  text-align: left;
+}

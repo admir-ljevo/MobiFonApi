@@ -1,18 +1,15 @@
-﻿using System;
+﻿using MobiFonShopApi.Models;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MobiFonShopApi.Models
+namespace MobiFonShopApi.ViewModels
 {
-    public class Telefon
+    public class TelefonGetVM
     {
-        [Key]
         public int Id { get; set; }
 
-        [ForeignKey(nameof(Proizvodjac))]
         public int ProizvodjacId { get; set; }
 
         public Proizvodjac Proizvodjac { get; set; }
@@ -27,8 +24,6 @@ namespace MobiFonShopApi.Models
         public string Slika_telefona { get; set; }
         public int MjeseciGarancije { get; set; }
         public bool Novo { get; set; }
-        public bool FiksnaCijena { get; set; }
-        public string Detaljno { get; set; }
         public float Cijena { get; set; }
     }
 }

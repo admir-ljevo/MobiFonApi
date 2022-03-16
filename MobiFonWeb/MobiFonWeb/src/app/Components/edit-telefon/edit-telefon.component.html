@@ -54,6 +54,16 @@
           <label class="form-check-label">Novo</label>
         </div>
 
+        <div class="mb-3 form-check">
+          <input   type="checkbox" class="form-check-input" [(ngModel)]="editTelefon.fiksnaCijena"  placeholder="Fiksna cijena" />
+          <label class="form-check-label">Fiksna cijena</label>
+        </div>
+
+        <div class="mb-3" >
+
+          <textarea name="detaljno" id="detaljno" [(ngModel)]="editTelefon.detaljno" cols="50" rows="10" placeholder="Detaljan opis"></textarea>
+        </div>
+
         <div class="mb-3" >
           <label class="form-label">Cijena KM</label>
           <input class="form-control" [(ngModel)]="editTelefon.cijena"  placeholder="KM">

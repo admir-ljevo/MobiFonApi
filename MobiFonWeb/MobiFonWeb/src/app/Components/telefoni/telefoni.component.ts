@@ -63,6 +63,8 @@ export class TelefoniComponent implements OnInit {
       mjeseciGarancije: 0,
       novo: false,
       prikazi: true,
+      detaljno: "",
+      fiksnaCijena: true,
       cijena : 0
     }
   }

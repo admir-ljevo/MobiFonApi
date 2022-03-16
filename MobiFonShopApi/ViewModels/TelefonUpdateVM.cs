@@ -16,6 +16,8 @@ namespace MobiFonShopApi.ViewModels
         public string Ekran { get; set; }
         public bool Garancija { get; set; }
         public int MjeseciGarancije { get; set; }
+        public bool FiksnaCijena { get; set; }
+        public string Detaljno { get; set; }
         public bool Novo { get; set; }
         public float Cijena { get; set; }
     }

@@ -1,1 +1,44 @@
 <app-header></app-header>
+<div class="slika-container">
+<img src="{{telefonPodaci.slika_telefona}}" alt="">
+
+</div>
+<app-banners></app-banners>
+
+<table class="table table-info">
+  <tr>
+  <th>Proizvođač</th>
+  <th>Model</th>
+  <th>Kamera</th>
+  <th>Procesor</th>
+  <th>RAM</th>
+  <th>Memorija</th>
+  <th>Ekran</th>
+  <th>Garancija</th>
+  <th>Trajanje garancije</th>
+  <th>Stanje</th>
+    <th>Detaljan opis</th>
+    <th>Fiksna cijena</th>
+  <th>Cijena</th>
+</tr>
+<tbody>
+<tr>
+  <td>{{telefonPodaci.proizvodjac.opis}}</td>
+  <td>{{telefonPodaci.model}}</td>
+  <td>{{telefonPodaci.kamera}}</td>
+  <td>{{telefonPodaci.procesor}}</td>
+  <td>{{telefonPodaci.ram}}</td>
+  <td>{{telefonPodaci.memorija}}</td>
+  <td>{{telefonPodaci.ekran}}</td>
+  <td *ngIf="telefonPodaci.garancija" >Posjeduje</td>
+  <td *ngIf="telefonPodaci.garancija==false" >Ne posjeduje</td>
+  <td>{{telefonPodaci.mjeseciGarancije}} mjeseci</td>
+  <td *ngIf="telefonPodaci.novo">Novo</td>
+  <td *ngIf="telefonPodaci.novo==false">Polovno</td>
+  <td>{{telefonPodaci.detaljno}}</td>
+  <td *ngIf="telefonPodaci.fiksnaCijena">Da</td>
+  <td *ngIf="telefonPodaci.fiksnaCijena==false">Ne</td>
+  <td>{{telefonPodaci.cijena}} KM</td>
+</tr>
+</tbody>
+</table>

@@ -52,6 +52,8 @@ namespace MobiFonShopApi.Controllers
             telefon.Ekran = vm.Ekran;
             telefon.Garancija = vm.Garancija;
             telefon.MjeseciGarancije = vm.MjeseciGarancije;
+            telefon.FiksnaCijena = vm.FiksnaCijena;
+            telefon.Detaljno = telefon.Detaljno;
             telefon.Novo = vm.Novo;
             telefon.Cijena = vm.Cijena;
 
@@ -118,7 +120,32 @@ namespace MobiFonShopApi.Controllers
             return _dbContext.Telefon.Include(x => x.Proizvodjac).Where(x => x.ProizvodjacId == id).ToList();
         }
 
+        [HttpGet]
+        public ActionResult<Telefon> GetByTelefon(int id)
+        {
+            Telefon telefon = _dbContext.Telefon.Include(x=> x.Proizvodjac).SingleOrDefault(x=>x.Id==id);
+            if (telefon == null)
+                return BadRequest("Odabrani telefon ne postoji. ");
 
+            //TelefonGetVM getPodaci = new TelefonGetVM
+            //{
+            //    Id = telefon.Id,
+            //    ProizvodjacId = telefon.ProizvodjacId,
+            //    Proizvodjac = telefon.Proizvodjac,
+            //    Model = telefon.Model,
+            //    Kamera = telefon.Kamera,
+            //    Procesor = telefon.Procesor,
+            //    Ram = telefon.Ram,
+            //    Memorija = telefon.Memorija,
+            //    Garancija = telefon.Garancija,
+            //    Slika_telefona = telefon.Slika_telefona,
+            //    MjeseciGarancije = telefon.MjeseciGarancije,
+            //    Novo = telefon.Novo,
+            //    Cijena = telefon.Cijena
+            //};
+
+            return Ok(telefon);
+        }
 
 
     }
