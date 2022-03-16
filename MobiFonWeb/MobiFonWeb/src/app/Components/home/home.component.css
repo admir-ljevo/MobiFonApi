@@ -81,8 +81,8 @@ option:hover{
 
 .mobiteli-container{
 
-  position: relative;
-  margin-top: 100px;
+  position: absolute;
+  top: 505px;
   margin-left: 22.5%;
   flex-wrap: wrap;
   display: flex;

@@ -11,6 +11,8 @@ import { LoginComponent } from './Components/login/login.component';
 import { HomeComponent } from './Components/home/home.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { TelefonDetaljiComponent } from './Components/telefon-detalji/telefon-detalji.component';
+import { BannersComponent } from './Components/banners/banners.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import { TelefonDetaljiComponent } from './Components/telefon-detalji/telefon-de
     LoginComponent,
     HomeComponent,
     HeaderComponent,
-    TelefonDetaljiComponent
+    TelefonDetaljiComponent,
+    BannersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
 
   ],
   providers: [],

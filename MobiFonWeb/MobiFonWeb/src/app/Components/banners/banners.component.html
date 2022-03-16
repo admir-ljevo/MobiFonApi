@@ -1,0 +1,9 @@
+<div class="banners-container">
+  <div class="sliders">
+    <ng-container *ngFor="let banner of banners; let i = index">
+      <div class="slider" *ngIf="current == i" @fade>
+        <img class="img" [src]="banner.url">
+      </div>
+    </ng-container>
+  </div>
+</div>
